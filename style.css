@@ -1,0 +1,60 @@
+body {
+    background-color: #444;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100vh;
+}
+
+.loader-line {
+	display: inline-block;
+	margin-bottom: 15%;
+	font-size: 0;
+	width: 80px;
+	height: 80px;
+}
+.loader-line > span {
+	width: 10px;
+	height: 60px;
+	margin-left: 2px;
+	animation-duration: 1500ms;
+	display: inline-block;
+	animation-timing-function: cubic-bezier(1.645, 0.045, 0.355, 1.3);
+	animation-iteration-count: infinite;
+}
+.loader-line span:nth-child(1) {
+	animation-delay: 100ms;
+	background-color: #27AAE1;
+}
+.loader-line > span:nth-child(2) {
+	animation-delay: 200ms;
+	background-color: #F05A2A;
+}
+.loader-line> span:nth-child(3) {
+	animation-delay: 300ms;
+	background-color: #FFCC00;
+}
+.loader-line > span:nth-child(4) {
+	animation-delay: 400ms;
+	background-color: #27AE60;
+}
+.loader-line> span:nth-child(5) {
+	animation-delay: 500ms;
+	background-color: #ae2727;
+}
+.loader-line > span:nth-child(6) {
+	animation-delay: 600ms;
+	background-color: #6b26b7;
+}
+.loader-line > span {
+	animation-name: anm-move;
+	animation-duration: 2000ms;
+	transform-origin: bottom left;
+	animation-timing-function: linear;
+}
+@keyframes anm-move {
+	to {
+		transform: rotateX(360deg);
+	}
+}
